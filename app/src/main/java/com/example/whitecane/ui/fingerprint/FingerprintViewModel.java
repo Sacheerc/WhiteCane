@@ -9,7 +9,7 @@ public class FingerprintViewModel extends ViewModel {
 
     public FingerprintViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is fingerprint fragment");
+        mText.setValue("Magnetic Fingerprint Collector");
     }
 
     public LiveData<String> getText() {

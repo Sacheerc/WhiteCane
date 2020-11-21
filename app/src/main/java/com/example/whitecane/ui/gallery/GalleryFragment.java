@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,6 +16,9 @@ import androidx.lifecycle.ViewModelProviders;
 import com.example.whitecane.R;
 
 public class GalleryFragment extends Fragment {
+
+    private String ipAddress;
+    private Button up_btn, down_btn;
 
     private GalleryViewModel galleryViewModel;
 
@@ -30,6 +34,12 @@ public class GalleryFragment extends Fragment {
                 textView.setText(s);
             }
         });
+
+        ipAddress = "http://192.168.1.52:1337";
+        up_btn = (Button) root.findViewById(R.id.up_btn);
+        down_btn = (Button) root.findViewById(R.id.down_btn);
+
+// https://www.youtube.com/watch?v=oGWJ8xD2W6k
         return root;
     }
 }
